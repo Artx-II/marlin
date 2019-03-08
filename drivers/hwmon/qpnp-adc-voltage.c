@@ -1,4 +1,4 @@
-/* Copyright (c) 2012-2016, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2012-2017, 2019, The Linux Foundation. All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 and
@@ -1361,10 +1361,10 @@ static int32_t qpnp_vadc_calib_device(struct qpnp_vadc_chip *vadc)
 					(calib_read_1 - calib_read_2);
 	vadc->adc->amux_prop->chan_prop->adc_graph[CALIB_RATIOMETRIC].dx =
 					vadc->adc->adc_prop->adc_vdd_reference;
-	vadc->adc->amux_prop->chan_prop->adc_graph[CALIB_RATIOMETRIC].adc_vref
-					= calib_read_1;
-	vadc->adc->amux_prop->chan_prop->adc_graph[CALIB_RATIOMETRIC].adc_gnd
-					= calib_read_2;
+	vadc->adc->amux_prop->chan_prop->adc_graph[CALIB_RATIOMETRIC].adc_vref =
+					calib_read_1;
+	vadc->adc->amux_prop->chan_prop->adc_graph[CALIB_RATIOMETRIC].adc_gnd =
+					calib_read_2;
 
 calib_fail:
 	return rc;
