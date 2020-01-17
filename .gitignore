@@ -33,6 +33,7 @@
 *.patch
 *.gcno
 modules.builtin
+ipa_common
 Module.symvers
 *.dwo
 
